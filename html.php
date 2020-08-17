@@ -28,23 +28,11 @@ $navBar = '<nav class="navbar navbar-light bg-dark stiky-top">
         </form>
         </nav>';
 
-$itemsTableHead = '<div class="col-9">
-            <table class="table">
-                <thead><tr><th><p style="font-size:25pt" align="center">List of items</p></th></tr></thead>
-                <thead class="thead-dark">
-                <tr>
-                    <th scope="col">Item</th>
-                    <th scope="col">Model</th>
-                    <th scope="col">Type</th>
-                    <th scope="col">Price</th>
-                </tr>
-                </thead>
-                <tbody>';
+$tableHead = '<table class="table">
+              <tbody>';
 
-$itemsTableEnd = ' </tbody>
-            </table>
-        </div>
-    </div>';
+$tableEnd = ' </tbody>
+            </table>';
 
 $twoColumsTemplate = '<div class="row row-cols-2">';
 
@@ -74,10 +62,12 @@ $loginForm = '<div class="col-3">
 
 $clsDiv = '</div>';
 
-$upForm = '
-<form class="form-control" action="index.php" method="post">
-<div class="custom-file">
-  <input type="file" class="custom-file-input" id="customFileLang" lang="ru">
-  <label class="custom-file-label" for="customFileLang">Выберите файл</label>
-</div>
-</form>';
+$upForm = '<div class="container m-3">
+                <form enctype="multipart/form-data" action="index.php" method="POST">
+                  <div class="custom-file">
+                      <input name="file" type="file" class="custom-file-input" id="customFile">
+                      <label class="custom-file-label" for="customFile">Choose file</label>
+                    </div>
+                  <input type="submit" class="btn btn-primary m-1" value="Submit"></input>
+                </form>
+           </div>';
